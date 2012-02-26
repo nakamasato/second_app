@@ -1,4 +1,8 @@
 SecondApp::Application.routes.draw do
+  get "users/new"
+
+  match '/signup', to: 'users#new'
+
   match '/help', to: 'static_pages#help'
   match '/home', to: 'static_pages#home'
   match '/about', to: 'static_pages#about'
